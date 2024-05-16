@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222469045183",
+    "project_id": "mustafa-chat-clone-app",
+    "storage_bucket": "mustafa-chat-clone-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222469045183:android:e8d5413f8c59b071573f0a",
+        "android_client_info": {
+          "package_name": "com.example.mustafachatclone"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEpoCusfvJh584-0j_ovkr6_GCc-qDb9Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
