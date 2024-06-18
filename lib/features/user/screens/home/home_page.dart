@@ -169,10 +169,10 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
         
         controller: _tabController,
 
-        children: const [
+        children:  [
           ChatPage(),
           StatusPage(),
-          CallHistoryPage()
+          CallHistoryPage(currentUser: userController.user.value,)
           // StatusPage(),
         ],
       ),
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
             backgroundColor: tabColor,
             onPressed: () {
               // Navigator.pushNamed(context, PageConst.callContactsPage);
-              Navigator.push(context, MaterialPageRoute(builder: (context) => const CallContactsPage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) =>  CallContactsPage()));
 
             },
             child: const Icon(

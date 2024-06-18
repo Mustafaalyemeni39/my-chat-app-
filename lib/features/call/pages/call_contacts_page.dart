@@ -1,12 +1,15 @@
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:mustafachatclone/features/call/controllers/call/call_history_page_controller.dart';
 
 import '../../../global/theme/style.dart';
 import '../../../global/widgets/profile_widget.dart';
+import '../../user/controllers/user_controller.dart';
 
 class CallContactsPage extends StatelessWidget {
-  const CallContactsPage({Key? key}) : super(key: key);
-
+   const CallContactsPage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

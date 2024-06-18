@@ -35,8 +35,10 @@ class UserRepository extends GetxController {
     if (user != null) {
       print("User Existing  is HEreeeeeeeeeeeeeeeeeeeeeeeeeeauth.currentUser ${auth.currentUser!.uid} ");
      fireStore.collection(FirebaseCollectionConst.users).where("uid", isEqualTo: auth.currentUser!.uid).get().then((usr){
-        usr.docs.isNotEmpty?    print("Not Empyt Userss"):    print(" Empyt UsersOk");
-        usr.docs.isNotEmpty?  Get.offAll(() => const InitialProfileSubmitPage()):  Get.offAll(() => const HomePage());
+       print("HHHHHHHHHHHHHHHHHHHHH");
+       print(usr.docs.length);
+        usr.docs.isNotEmpty?    print("Existing In Table Users"):    print("Not Existing In Table Users");
+         usr.docs.isNotEmpty?  Get.offAll(() => const InitialProfileSubmitPage()):  Get.offAll(() => const HomePage());
       });
       //
       // userDb.docs.map((e) => UserModel.fromSnapshot(e)).toList().isEmpty?
@@ -75,7 +77,6 @@ class UserRepository extends GetxController {
 
       userCollection.doc(uid).get().then((userDoc) {
 
-
         if(!userDoc.exists) {
           userCollection.doc(uid).set(newUser);
         } else {
@@ -99,11 +100,7 @@ class UserRepository extends GetxController {
     return userCollection.snapshots().map((querySnapshot) => querySnapshot.docs.map((e) => UserModel.fromSnapshot(e)).toList());
 
   }
-
-
   Future<String> getCurrentUID() async => auth.currentUser!.uid;
-
-
   Future<List<ContactModel>> getDeviceNumber() async {
     List<ContactModel> contactsList=[];
 
